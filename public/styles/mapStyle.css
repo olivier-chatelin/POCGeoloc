@@ -1,0 +1,8 @@
+
+#map { /* use the same name as <div id=""> */
+ width: 50%; /* important! if you need full width display */
+ height: 400px;
+ margin: 0;
+ border-radius: 5px;
+ /* ... */
+}

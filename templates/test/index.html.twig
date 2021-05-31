@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form(form) }}
+    <input type='submit' value='ok'>
+    {{ form_end(form) }}
+    {% if cityData  %}
+<h1>{{ cityData.nom }}</h1>
+    <h2> Coordonnées</h2>
+    <ul>
+        <li id="longitude" data-longitude="{{ cityData.centre.coordinates[0] }}">longitude {{ cityData.centre.coordinates[0] }}</li>
+        <li id="latitude" data-latitude="{{ cityData.centre.coordinates[1] }}">latitude {{ cityData.centre.coordinates[1] }}</li>
+    </ul>
+    <div data-longitude="{{ cityData.centre.coordinates[0] }}" data-latitude="{{ cityData.centre.coordinates[1] }}" id="map"></div>
+    {% endif %}
+{% endblock %}
